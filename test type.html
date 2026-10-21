@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Typing Test – English &amp; Hindi</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2230;--mute:#667085;--line:#dde1e8;--acc:#2f6fed;--ok:#1a8f4c;--bad:#d92d20;--okbg:#e6f6ec;--badbg:#fdeceb;--curbg:#fff3c4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131a;--card:#181c26;--ink:#e8ebf2;--mute:#9aa3b5;--line:#2a3040;--acc:#6b9bff;--ok:#4cc884;--bad:#ff7a70;--okbg:#14301f;--badbg:#3a1a18;--curbg:#4a4115}}
+:root[data-theme="dark"]{--bg:#10131a;--card:#181c26;--ink:#e8ebf2;--mute:#9aa3b5;--line:#2a3040;--acc:#6b9bff;--ok:#4cc884;--bad:#ff7a70;--okbg:#14301f;--badbg:#3a1a18;--curbg:#4a4115}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari","Nirmala UI",Mangal,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.4rem;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 16px;font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+label{display:block;font-size:.8rem;color:var(--mute);margin-bottom:4px}
+select,input[type=number]{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+button{font:inherit;padding:10px 18px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--acc)}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.stats{display:flex;gap:18px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.stats b{font-size:1.3rem;display:block}
+.stats span{font-size:.75rem;color:var(--mute)}
+#passage{position:relative;height:150px;overflow:hidden;font-size:1.25rem;line-height:2;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);user-select:none}
+#passage span{padding:1px 2px;border-radius:4px}
+.ok{background:var(--okbg);color:var(--ok)}
+.bad{background:var(--badbg);color:var(--bad)}
+.cur{background:var(--curbg)}
+textarea{width:100%;box-sizing:border-box;margin-top:10px;height:90px;padding:10px;font:inherit;font-size:1.1rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);resize:none}
+textarea:disabled{opacity:.6}
+.note{font-size:.8rem;color:var(--mute);margin-top:8px}
+#result{display:none}
+.badge{display:inline-block;padding:4px 14px;border-radius:99px;font-weight:700;margin-bottom:10px}
+.pass{background:var(--okbg);color:var(--ok)}.fail{background:var(--badbg);color:var(--bad)}
+table{width:100%;border-collapse:collapse}td{padding:7px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-weight:600}
+:root{--bg:#e9eff8;--card:#fff;--ink:#14213d;--mute:#51607a;--line:#b6c4dc;--acc:#1f4e9c;--nav:#12306b;--saf:#ff9933;--grn:#138808;--ok:#138808;--bad:#c62828;--okbg:#e3f4e1;--badbg:#fde8e8;--curbg:#ffe8a3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1526;--card:#15203a;--ink:#e6ecf8;--mute:#a3b0cc;--line:#2c3d63;--acc:#6f9cff;--nav:#0a1f4a;--ok:#58d26a;--bad:#ff8a80;--okbg:#143a1d;--badbg:#3d1a1a;--curbg:#5a4a12}}
+:root[data-theme="dark"]{--bg:#0d1526;--card:#15203a;--ink:#e6ecf8;--mute:#a3b0cc;--line:#2c3d63;--acc:#6f9cff;--nav:#0a1f4a;--ok:#58d26a;--bad:#ff8a80;--okbg:#143a1d;--badbg:#3d1a1a;--curbg:#5a4a12}
+.tri{height:8px;background:linear-gradient(90deg,#ff9933 33.3%,#fff 33.3% 66.6%,#138808 66.6%)}
+.gov{background:linear-gradient(90deg,#0b2556,#1f4e9c);color:#fff;padding:14px 16px;border-bottom:4px solid var(--saf)}
+.gov .in{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px}
+.gov b{font-size:1.3rem;letter-spacing:1.5px}.gov span{font-size:.85rem;color:#ffd9a8}
+main{max-width:1000px}main>h1,main>.sub{display:none}
+.card{border-radius:4px;box-shadow:0 2px 6px rgba(18,48,107,.14);overflow:hidden}
+.ph{font-weight:700;color:var(--acc);border-left:5px solid var(--saf);padding-left:8px;margin:0 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+.card>.ph:first-child{margin:-16px -16px 14px;padding:9px 16px;background:var(--nav);color:#fff;border-left:0;border-bottom:3px solid var(--saf)}
+label{color:var(--acc);font-weight:600}
+.inst{margin:0 0 14px;padding:10px 10px 10px 30px;background:var(--bg);border:1px dashed var(--line);font-size:.9rem}
+#test>.stats{margin:-16px -16px 14px;padding:10px 16px;background:var(--nav);color:#fff;border-bottom:3px solid var(--saf)}
+.stats span{color:#cfdcf5}
+#tLeft{background:#fff;color:#c62828;border:2px solid var(--saf);border-radius:4px;padding:0 10px}
+#tGross{color:#ffd9a8}#tWords{color:#b8f0b3}
+#passage,textarea{font-family:Arial,Mangal,"Noto Sans Devanagari","Nirmala UI",sans-serif;border:2px solid var(--acc)}
+#passage{height:170px;font-size:1.3rem;line-height:2.1;background:var(--card);border-radius:2px}
+textarea{margin-top:0}
+.cur{background:var(--curbg);outline:2px solid var(--saf)}
+button{border-radius:4px;font-weight:600;letter-spacing:.3px}
+#startBtn,#againBtn{background:var(--grn);border-color:var(--grn)}
+#finishBtn{background:var(--saf);border-color:var(--saf);color:#1b1b1b}
+.badge{font-size:1.15rem;letter-spacing:1px;border-radius:4px;padding:8px 24px}
+.badge.pass{background:var(--grn);color:#fff}.badge.fail{background:var(--bad);color:#fff}
+td:first-child{padding-left:10px;font-weight:600}
+tr:nth-child(1) td:first-child{border-left:6px solid #1f4e9c}tr:nth-child(2) td:first-child{border-left:6px solid #138808}tr:nth-child(3) td:first-child{border-left:6px solid #ff9933}tr:nth-child(4) td:first-child{border-left:6px solid #6a3fb5}tr:nth-child(5) td:first-child{border-left:6px solid #00838f}tr:nth-child(n+6) td:first-child{border-left:6px solid #8d99ae}
+#rNet{font-size:1.2rem;color:var(--ok)}
+</style>
+</head>
+<body>
+<div class="tri"></div>
+<header class="gov"><div class="in"><b>COMPUTER TYPING TEST</b><span>Skill Test · English / हिन्दी</span></div></header>
+<main>
+<h1>Typing Speed Test</h1>
+<p class="sub">English &amp; Hindi · Gross / Net WPM · Pass or fail against your benchmark</p>
+
+<div class="card" id="setup">
+<div class="ph">General Instructions &amp; Test Settings</div>
+<ul class="inst"><li>The countdown starts when you type the first character.</li><li>Type the passage exactly as shown and press Space after every word.</li><li>Copy, paste and mouse selection are disabled during the test.</li><li>For Hindi, switch to a Hindi keyboard (Inscript or Remington) first.</li></ul>
+<div class="grid">
+<div><label for="lang">Language</label><select id="lang"><option value="en">English</option><option value="hi">हिन्दी (Hindi)</option></select></div>
+<div><label for="dur">Duration</label><select id="dur"><option value="1">1 minute</option><option value="2">2 minutes</option><option value="5">5 minutes</option><option value="10" selected>10 minutes</option></select></div>
+<div><label for="bs">Backspace / editing</label><select id="bs"><option value="1">Allowed</option><option value="0">Denied</option></select></div>
+<div><label for="wpm">Required net speed (WPM)</label><input type="number" id="wpm" min="1" max="200" value="35"></div>
+<div><label for="accReq">Required accuracy (%)</label><input type="number" id="accReq" min="1" max="100" value="90"></div>
+<div><label for="pno">Passage no. (1–500)</label><input type="number" id="pno" min="1" max="500" value="1"></div>
+</div>
+<div class="bar"><button id="startBtn">Start test</button><span class="note" id="hint" style="margin:0">The timer starts when you type the first character.</span></div>
+</div>
+
+<div class="card" id="test" style="display:none">
+<div class="stats">
+<div><b id="tLeft">10:00</b><span>Time left</span></div>
+<div><b id="tGross">0</b><span>Gross WPM</span></div>
+<div><b id="tWords">0</b><span>Words typed</span></div>
+</div>
+<div class="ph" style="margin-top:12px">Passage</div>
+<div id="passage"></div>
+<div class="ph" style="margin-top:12px">Your typing</div>
+<textarea id="ta" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start typing here…"></textarea>
+<div class="bar"><button class="ghost" id="finishBtn">Finish now</button><button class="ghost" id="restartBtn">Restart</button></div>
+</div>
+
+<div class="card" id="result">
+<div class="ph">Result Summary</div>
+<div id="verdict" class="badge"></div>
+<table>
+<tr><td>Gross speed</td><td id="rGross"></td></tr>
+<tr><td>Net speed</td><td id="rNet"></td></tr>
+<tr><td>Accuracy</td><td id="rAcc"></td></tr>
+<tr><td>Total keystrokes</td><td id="rKeys"></td></tr>
+<tr><td>Words typed / wrong words</td><td id="rWords"></td></tr>
+<tr><td>Time used</td><td id="rTime"></td></tr>
+<tr><td>Passage</td><td id="rPid"></td></tr>
+</table>
+<p class="note" id="rFormula"></p>
+<div class="bar"><button id="againBtn">Take another test</button></div>
+</div>
+
+<p class="note">Gross WPM = (keystrokes ÷ 5) ÷ minutes. Net WPM = Gross WPM − (wrong words ÷ minutes). A word counts as wrong if it does not match the passage exactly. For Hindi, turn on a Hindi keyboard (Inscript / Remington) in your device or browser.</p>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const P={
+en:[
+"Education is the most powerful tool that a society can use to shape its future. A good teacher does not only share facts with students but also inspires them to ask questions, think clearly and act with kindness. When learners feel respected in the classroom, they take risks, make mistakes and grow stronger with every attempt.",
+"India is a land of many languages, cultures and traditions. From the snow covered peaks of the Himalayas to the warm beaches of the south, every region has its own food, festivals and folk songs. This diversity is the real strength of the country, and it teaches us to live together with respect and understanding.",
+"Regular practice is the secret of improving typing speed. Sit straight, keep your wrists relaxed and place your fingers on the home row keys. Look at the screen instead of the keyboard and focus on accuracy first. Speed will follow naturally once your fingers remember the position of every key.",
+"Technology has changed the way we learn, work and communicate. Students can now attend classes online, read books on their phones and share ideas with people across the world within seconds. However, the wise use of technology requires discipline, so that it remains a helpful servant and never becomes a harmful master.",
+"A library is a quiet treasure house where every shelf holds a different world. Readers can travel to distant countries, meet great thinkers and learn about the history of mankind without leaving their seats. Children who visit the library regularly develop a love for books that stays with them for life.",
+"Water is essential for all living beings, yet many people waste it without a second thought. A running tap, a leaking pipe or an unnecessary bath can drain thousands of litres in a year. If every family adopts small habits of saving water, our rivers and wells will remain full for the generations to come.",
+"Health is the greatest wealth that a person can possess. Eating fresh food, sleeping on time and walking for half an hour every day keep the body strong and the mind calm. Doctors often say that prevention is better than cure, and a simple routine can protect us from many serious diseases.",
+"Farmers are the backbone of our nation because they work under the sun and rain to feed millions of families. Their life is full of hard work, patience and uncertainty. A country that respects its farmers and supports them with fair prices and modern tools can truly claim to be prosperous.",
+"Honesty is a quality that earns trust without any effort. A person who speaks the truth, keeps promises and returns what belongs to others is respected by everyone around. Small acts of honesty in daily life build a strong character, and a strong character is the foundation of every great achievement.",
+"Sports teach us lessons that no textbook can fully explain. On the field, we learn to follow rules, support our teammates and accept defeat with grace. A player who trains daily and never gives up discovers that discipline and hard work matter far more than natural talent.",
+"Trees are the silent guardians of our planet. They give us oxygen, shade, fruit and shelter for countless birds and animals. When forests are cut down, the climate becomes harsher and the soil loses its strength. Planting a sapling today is a gift we leave for tomorrow.",
+"Time is the one resource that cannot be bought, saved or returned. Successful students plan their day, finish tasks before the deadline and avoid wasting hours on useless habits. A short schedule written on a piece of paper can change the way a person studies, works and lives.",
+"Festivals bring colour and joy into our lives. Families clean their homes, cook special dishes and meet relatives and neighbours with warm greetings. These celebrations remind us that happiness grows when it is shared, and that every culture has its own beautiful way of saying thank you.",
+"The mobile phone has become a part of our daily routine. It helps us talk to loved ones, pay bills, find directions and learn new skills. Yet too much screen time can harm our eyes, sleep and relationships, so it is wise to set limits and spend more time with real people."],
+hi:[
+"शिक्षा समाज की सबसे बड़ी शक्ति है। एक अच्छा शिक्षक केवल पाठ्यपुस्तक नहीं पढ़ाता, बल्कि विद्यार्थियों को सोचने, प्रश्न पूछने और सही निर्णय लेने की प्रेरणा भी देता है। जब बच्चे कक्षा में सम्मान महसूस करते हैं, तब वे निडर होकर सीखते हैं और आगे बढ़ते हैं।",
+"भारत विविधता में एकता का देश है। यहाँ अनेक भाषाएँ बोली जाती हैं और अनेक धर्मों के लोग मिलजुल कर रहते हैं। हिमालय की बर्फीली चोटियों से लेकर दक्षिण के सुंदर समुद्र तटों तक हर क्षेत्र की अपनी अलग पहचान है। यही विविधता हमारे देश की सच्ची सुंदरता है।",
+"नियमित अभ्यास से ही टाइपिंग की गति बढ़ती है। सीधे बैठिए, हाथों को ढीला रखिए और उँगलियों को सही कुंजियों पर रखिए। पहले शुद्धता पर ध्यान दीजिए, गति अपने आप बढ़ जाएगी। धैर्य और निरंतर परिश्रम से हर कठिन कार्य आसान हो जाता है।",
+"विज्ञान और तकनीक ने हमारे जीवन को बहुत आसान बना दिया है। आज हम घर बैठे पढ़ाई कर सकते हैं, दूर रहने वाले लोगों से बात कर सकते हैं और कुछ ही क्षणों में जानकारी प्राप्त कर सकते हैं। फिर भी हमें तकनीक का उपयोग समझदारी से करना चाहिए।",
+"पुस्तकालय ज्ञान का अनमोल खजाना है। यहाँ हर अलमारी में एक नई दुनिया बसती है। पाठक कुर्सी पर बैठे-बैठे दूर देशों की यात्रा कर सकते हैं और महान विचारकों से मिल सकते हैं। जो बच्चे नियमित रूप से पुस्तकालय जाते हैं, उन्हें पढ़ने की आदत जीवन भर साथ देती है।",
+"जल ही जीवन है, फिर भी बहुत से लोग पानी को व्यर्थ बहा देते हैं। खुला नल और टपकती टंकी साल भर में हजारों लीटर पानी बर्बाद कर देती है। यदि हर परिवार पानी बचाने की छोटी-छोटी आदतें अपना ले, तो आने वाली पीढ़ियों के लिए नदियाँ और कुएँ भरे रहेंगे।",
+"स्वास्थ्य सबसे बड़ा धन है। ताजा भोजन करना, समय पर सोना और प्रतिदिन आधा घंटा टहलना शरीर को मजबूत और मन को शांत रखता है। इलाज से बेहतर बचाव है, और एक सरल दिनचर्या हमें अनेक गंभीर बीमारियों से बचा सकती है।",
+"किसान हमारे देश की रीढ़ हैं। वे धूप और बरसात में मेहनत करके करोड़ों परिवारों का पेट भरते हैं। उनका जीवन परिश्रम, धैर्य और अनिश्चितता से भरा होता है। जो देश अपने किसानों का सम्मान करता है, वही सच्चे अर्थों में समृद्ध कहलाता है।",
+"ईमानदारी ऐसा गुण है जो बिना प्रयास के विश्वास दिला देता है। जो व्यक्ति सच बोलता है, वादे निभाता है और दूसरों की चीज लौटा देता है, उसका सब सम्मान करते हैं। रोजमर्रा की छोटी ईमानदारी मजबूत चरित्र बनाती है, और मजबूत चरित्र ही हर सफलता की नींव है।",
+"खेल हमें वे पाठ सिखाते हैं जो कोई पुस्तक पूरी तरह नहीं समझा सकती। मैदान पर हम नियमों का पालन करना, साथियों का साथ देना और हार को शालीनता से स्वीकार करना सीखते हैं। जो खिलाड़ी प्रतिदिन अभ्यास करता है, वह जान लेता है कि अनुशासन प्रतिभा से अधिक महत्वपूर्ण है।",
+"वृक्ष हमारी धरती के मौन रक्षक हैं। वे हमें प्राणवायु, छाया, फल और असंख्य पक्षियों को आश्रय देते हैं। जब जंगल कटते हैं, तो मौसम कठोर हो जाता है और मिट्टी की उपजाऊ शक्ति घट जाती है। आज एक पौधा लगाना आने वाले कल के लिए हमारा उपहार है।",
+"त्योहार हमारे जीवन में रंग और उमंग भर देते हैं। लोग घर सजाते हैं, विशेष पकवान बनाते हैं और रिश्तेदारों व पड़ोसियों से प्रेमपूर्वक मिलते हैं। ये उत्सव हमें याद दिलाते हैं कि खुशी बाँटने से बढ़ती है और हर संस्कृति का धन्यवाद कहने का अपना सुंदर ढंग होता है।"]
+};
+const DEF={en:35,hi:30};
+let words=[],keys=0,prevLen=0,started=false,t0=0,durMs=0,timer=null,done=false,noBack=false,lang='en',wpmEdited=false,lastCur=-1;
+
+$('wpm').addEventListener('input',()=>wpmEdited=true);
+$('lang').addEventListener('change',()=>{ if(!wpmEdited) $('wpm').value=DEF[$('lang').value]; });
+
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function shuffled(a,r){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let pid=1,lap=0;
+function extend(){const r=rng(pid*7919+(lap++)*104729+(lang==='hi'?1:0)),out=[];while(out.length<1000)shuffled(P[lang],r).forEach(p=>{if(out.length<1000)out.push(...p.split(/\s+/))});words=words.concat(out)}
+function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function typedWords(){const v=$('ta').value;return v.length?v.split(/\s+/):[]}
+
+function render(){
+  const tw=typedWords(), cur=tw.length?tw.length-1:0;
+  if(tw.length>words.length-60) extend();
+  let h='';
+  for(let i=0;i<words.length;i++){
+    let c='';
+    if(i<cur) c=tw[i]===words[i]?'ok':'bad';
+    else if(i===cur) c=(tw[i]||'')&&!words[i].startsWith(tw[i])?'cur bad':'cur';
+    h+='<span'+(c?' class="'+c+'"':'')+(i===cur?' id="curw"':'')+'>'+words[i]+'</span> ';
+  }
+  const box=$('passage');box.innerHTML=h;
+  const el=$('curw');if(el){box.scrollTop=Math.max(0,el.offsetTop-50)}
+  $('tWords').textContent=tw.length;
+}
+function elapsedMin(){return Math.max(Math.min(Date.now()-t0,durMs),1000)/60000}
+function tick(){
+  const left=durMs-(Date.now()-t0);
+  $('tLeft').textContent=fmt(left);
+  $('tGross').textContent=Math.round(keys/5/elapsedMin());
+  if(left<=0) finish();
+}
+function startTest(){
+  lang=$('lang').value;durMs=+$('dur').value*60000;noBack=$('bs').value==='0';
+  pid=Math.min(500,Math.max(1,parseInt($('pno').value)||1));words=[];lap=0;extend();keys=0;prevLen=0;started=false;done=false;
+  $('setup').style.display='none';$('result').style.display='none';$('test').style.display='block';
+  const ta=$('ta');ta.value='';ta.disabled=false;ta.lang=lang==='hi'?'hi':'en';ta.focus();
+  $('tLeft').textContent=fmt(durMs);$('tGross').textContent='0';
+  render();
+}
+function finish(){
+  if(done)return;done=true;clearInterval(timer);$('ta').disabled=true;
+  const tw=typedWords(),min=started?elapsedMin():durMs/60000;
+  let wrong=0;tw.forEach((w,i)=>{if(w!==words[i])wrong++});
+  const gross=keys/5/min,net=Math.max(0,gross-wrong/min);
+  const acc=tw.length?(tw.length-wrong)/tw.length*100:0;
+  const need=+$('wpm').value,accReq=+$('accReq').value;
+  const pass=net>=need&&acc>=accReq;
+  const v=$('verdict');v.textContent=pass?'QUALIFIED':'NOT QUALIFIED';v.className='badge '+(pass?'pass':'fail');
+  $('rGross').textContent=gross.toFixed(1)+' WPM';
+  $('rNet').textContent=net.toFixed(1)+' WPM (need '+need+')';
+  $('rAcc').textContent=acc.toFixed(1)+'% (need '+accReq+'%)';
+  $('rKeys').textContent=keys;
+  $('rWords').textContent=tw.length+' / '+wrong;
+  $('rTime').textContent=(min*60).toFixed(0)+' sec';$('rPid').textContent='#'+pid;
+  $('rFormula').textContent='Gross = ('+keys+' ÷ 5) ÷ '+min.toFixed(2)+' min. Net = Gross − ('+wrong+' ÷ '+min.toFixed(2)+' min).';
+  $('test').style.display='none';$('result').style.display='block';
+}
+function reset(){clearInterval(timer);done=true;$('result').style.display='none';$('test').style.display='none';$('setup').style.display='block'}
+
+const ta=$('ta');
+ta.addEventListener('input',()=>{
+  if(done)return;
+  let v=ta.value.replace(/^\s+/,'').replace(/\s{2,}/g,' ');
+  if(v!==ta.value)ta.value=v;
+  if(v.length>prevLen){
+    keys+=v.length-prevLen;
+    if(!started){started=true;t0=Date.now();timer=setInterval(tick,250)}
+  }
+  prevLen=v.length;
+  render();
+});
+ta.addEventListener('keydown',e=>{
+  if(e.key==='Enter'){e.preventDefault();return}
+  if(noBack){
+    const k=e.key,c=e.ctrlKey||e.metaKey;
+    if(k==='Backspace'||k==='Delete'||k.startsWith('Arrow')||k==='Home'||k==='End'||(c&&'zyxa'.includes(k.toLowerCase())))e.preventDefault();
+  }
+});
+ta.addEventListener('beforeinput',e=>{
+  if(e.inputType&&e.inputType.startsWith('delete')&&noBack)e.preventDefault();
+  if(e.inputType==='insertFromPaste'||e.inputType==='insertFromDrop')e.preventDefault();
+});
+['paste','cut','drop','copy'].forEach(ev=>ta.addEventListener(ev,e=>e.preventDefault()));
+['click','select','mouseup','focus'].forEach(ev=>ta.addEventListener(ev,()=>{if(noBack){ta.setSelectionRange(ta.value.length,ta.value.length)}}));
+$('startBtn').onclick=startTest;$('restartBtn').onclick=()=>{reset();startTest()};
+$('finishBtn').onclick=()=>{if(started)finish();else reset()};
+function rndPno(){$('pno').value=Math.floor(Math.random()*500)+1}
+$('againBtn').onclick=()=>{reset();rndPno()};rndPno();
+</script>
+</body>
+</html>
